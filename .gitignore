@@ -1,0 +1,65 @@
+# ─────────────────────────────
+#  Python
+# ─────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+*.env
+
+# Archivos temporales de ejecución
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Compilados y caches
+*.pyo
+*.pyd
+*.so
+build/
+dist/
+.eggs/
+*.egg-info/
+.DS_Store
+
+# ─────────────────────────────
+#  Datos / Salidas
+# ─────────────────────────────
+# PDFs, Excels y archivos de datos grandes
+*.pdf
+*.xlsx
+*.xls
+*.ods
+*.csv
+*.tsv
+
+# Carpeta de salida (cualquiera que empiece con 'out' o 'Out')
+out*/
+Out*/
+
+# ─────────────────────────────
+#  IDEs / Editores
+# ─────────────────────────────
+# VS Code
+.vscode/
+.history/
+
+# PyCharm / JetBrains
+.idea/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# ─────────────────────────────
+#  Otros
+# ─────────────────────────────
+# Archivos temporales del sistema
+Thumbs.db
+desktop.ini
