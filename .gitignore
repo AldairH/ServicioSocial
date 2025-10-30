@@ -39,6 +39,7 @@ dist/
 *.ods
 *.csv
 *.tsv
+*.json
 
 # Carpeta de salida (cualquiera que empiece con 'out' o 'Out')
 out*/
