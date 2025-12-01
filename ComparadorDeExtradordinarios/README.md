@@ -1,11 +1,11 @@
-#Comparador de Horarios Extraordinarios — UNAM
+# Comparador de Horarios Extraordinarios — UNAM
 
-##Descripción:
+## Descripción:
 Este programa automatiza la extracción, normalización y comparación de horarios de exámenes extraordinarios provenientes de dos PDFs:
 - doc.pdf (generalmente más variable e inestable en su estructura)
 - INGENIERIA EN COMPUTACION.pdf (formato más consistente)
 
-##El sistema realiza:
+## El sistema realiza:
 1. Extracción de tablas desde ambos PDFs mediante PyMuPDF.
 2. Normalización completa de campos clave (clave de materia, grupo, fecha, hora, salón, profesores).
 3. Unificación y deduplicación interna de registros, detectando duplicados basados en “firma operativa”.
@@ -18,7 +18,7 @@ Este programa automatiza la extracción, normalización y comparación de horari
     - out/coincidencias.xlsx
 El objetivo es automatizar un proceso que antes implicaba revisión manual de cientos de horarios y detectar discrepancias entre la planeación oficial y la versión departamental.
 
-##Estructura del Proyecto:
+## Estructura del Proyecto:
 ComparadorDeExtradordinarios/
 │── config.py
 │── normalizers.py       ← Normalización de todos los campos
@@ -30,7 +30,7 @@ ComparadorDeExtradordinarios/
 │── INGENIERIA EN COMPUTACION.pdf
 └── out/
 
-##Principales Funcionalidades
+## Principales Funcionalidades
 - Extracción automática de tablas con PyMuPDF.
 - Normalización robusta de:
     - CLAVE
@@ -46,7 +46,7 @@ ComparadorDeExtradordinarios/
 - Reportes automáticos en TXT y Excel.
 - Carpeta out/ creada automáticamente en el directorio del proyecto (sin depender del directorio desde el que se ejecute el script).
 
-##Requisitos:
+## Requisitos:
 - Python 3.9 o superior
 - pymupdf
 - pandas
@@ -54,9 +54,9 @@ ComparadorDeExtradordinarios/
 - unidecode
 **Instalación:** pip install pymupdf pandas openpyxl unidecode
 
-##Qué hacer si cambian los PDF o el formato de los datos
-###Este proyecto fue diseñado de manera modular justamente para facilitar el mantenimiento frente a cambios de formato.
-###Dependiendo del tipo de cambio, se debe modificar solo un archivo, sin tocar todo el programa.
+## Qué hacer si cambian los PDF o el formato de los datos
+### Este proyecto fue diseñado de manera modular justamente para facilitar el mantenimiento frente a cambios de formato.
+### Dependiendo del tipo de cambio, se debe modificar solo un archivo, sin tocar todo el programa.
 
 1. Si **cambia la estructura** del PDF doc.pdf
     Archivo a modificar: parsers.py → rows_from_doc_matrix() / parse_materia_cell()
@@ -106,7 +106,7 @@ ComparadorDeExtradordinarios/
     - Quieran cambiar el estilo del Excel.
     - Quieran exportar a CSV u otro formato.
 
-Resumen de mantenimiento
+## Resumen de mantenimiento
 | Tipo de cambio                     | Archivo a modificar                   |
 | ---------------------------------- | ------------------------------------- |
 | Cambió doc.pdf                     | `parsers.py` (parser específico)      |
