@@ -1,4 +1,4 @@
-# Comparador de Horarios Extraordinarios — UNAM
+# Comparador de Horarios Extraordinarios
 
 ## Descripción:
 Este programa automatiza la extracción, normalización y comparación de horarios de exámenes extraordinarios provenientes de dos PDFs:
