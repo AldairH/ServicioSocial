@@ -1,4 +1,4 @@
-# Bot de extracción de expedientes UNAM
+# Bot de extracción de expedientes
 
 ## Descripción:
 Este bot automatiza la extracción masiva de expedientes desde la plataforma de seguimiento de titulación de la UNAM.
@@ -65,45 +65,45 @@ pip install selenium webdriver-manager pandas openpyxl requests beautifulsoup4 l
 
 ## ¿Qué hacer si la página cambia?
 
-1. **Cambió algún selector CSS/XPATH (muy común)**
-    Archivo a revisar: config.py
-    Ahí están todos los selectores:
-        - SEL_SEGUIMIENTO = (...)
-        - SEL_FILAS = (...)
-        - SEL_COL_ESTADO = (...)
-        - SEL_TBODY = (...)
+1. **Cambió algún selector CSS/XPATH (muy común)** <br>
+    Archivo a revisar: config.py <br>
+    Ahí están todos los selectores: <br>
+        - SEL_SEGUIMIENTO = (...) <br>
+        - SEL_FILAS = (...) <br>
+        - SEL_COL_ESTADO = (...) <br>
+        - SEL_TBODY = (...) <br>
 
-2. **Cambió el botón que abre un expediente**
-    Archivo a revisar: selenium_flow.py → función _obtener_url_expediente_desde_fila()
-    Esto ocurre si:
-    - Ya no tiene onclick
-    - Cambió el atributo data-href
-    - El botón se movió de columna
-    Qué modificar:
-    Ajustar el selector del botón o la lógica que extrae la URL.
+2. **Cambió el botón que abre un expediente** <br>
+    Archivo a revisar: selenium_flow.py → función _obtener_url_expediente_desde_fila() <br>
+    Esto ocurre si: <br>
+    - Ya no tiene onclick <br>
+    - Cambió el atributo data-href <br>
+    - El botón se movió de columna <br>
+    Qué modificar: <br>
+    Ajustar el selector del botón o la lógica que extrae la URL. <br>
 
-3. **Cambió la estructura interna del expediente (HTML)**
-    Archivo a revisar: expedientes_service.py
-    Funciones:
-    - bs4_obtener_valor()
-    - bs4_obtener_cita_programada()
-    - descargar_y_extraer_expediente()
-    Qué cambiar:
-    Los textos de los labels o las clases que usa la página.
+3. **Cambió la estructura interna del expediente (HTML)** <br>
+    Archivo a revisar: expedientes_service.py <br>
+    Funciones: <br>
+    - bs4_obtener_valor() <br>
+    - bs4_obtener_cita_programada() <br>
+    - descargar_y_extraer_expediente() <br>
+    Qué cambiar: <br>
+    Los textos de los labels o las clases que usa la página. <br>
     Ejemplo: bs4_obtener_valor(soup, "Nombre:"), si ahora dice "Nombre completo:", solo actualiza la cadena.
 
-4. **Cambió la URL base o rutas internas del sistema**
-    Archivo a revisar: config.py
-    Modifica:
-    URL = "https://seguimientotitulacion.unam.mx/control/login"
-    Todo lo demás se ajustará automáticamente.
+4. **Cambió la URL base o rutas internas del sistema**  <br>
+    Archivo a revisar: config.py <br>
+    Modifica: <br>
+    URL = "nueva_url" <br>
+    Todo lo demás se ajustará automáticamente. <br>
 
-5. **Cambió el flujo de navegación después del login**
-    Archivo a revisar:
-    selenium_flow.py → esperar_login_e_ir_a_seguimiento()
-    Actualiza:
-    - El selector del botón Seguimiento
-    - La URL parcial "/listado/seguimiento"
+5. **Cambió el flujo de navegación después del login** <br>
+    Archivo a revisar: <br>
+    selenium_flow.py → esperar_login_e_ir_a_seguimiento() <br>
+    Actualiza: <br>
+    - El selector del botón Seguimiento <br>
+    - La URL parcial "/listado/seguimiento" <br>
 
 **Resumen**
 | Síntoma                      | Archivo a revisar                                                 |
