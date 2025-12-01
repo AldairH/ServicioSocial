@@ -19,16 +19,16 @@ Este programa automatiza la extracción, normalización y comparación de horari
 El objetivo es automatizar un proceso que antes implicaba revisión manual de cientos de horarios y detectar discrepancias entre la planeación oficial y la versión departamental.
 
 ## Estructura del Proyecto:
-ComparadorDeExtradordinarios/
-│── config.py
-│── normalizers.py       ← Normalización de todos los campos
-│── parsers.py           ← Parsers independientes para cada PDF
-│── comparator.py        ← Comparación basada en firmas
-│── report.py            ← Generación de TXT y Excel
-│── main.py              ← Punto de entrada
-│── doc.pdf
-│── INGENIERIA EN COMPUTACION.pdf
-└── out/
+ComparadorDeExtradordinarios/ <br>
+│── config.py <br>
+│── normalizers.py       ← Normalización de todos los campos <br>
+│── parsers.py           ← Parsers independientes para cada PDF <br>
+│── comparator.py        ← Comparación basada en firmas <br>
+│── report.py            ← Generación de TXT y Excel <br>
+│── main.py              ← Punto de entrada <br>
+│── doc.pdf <br>
+│── INGENIERIA EN COMPUTACION.pdf <br>
+└── out/ <br> 
 
 ## Principales Funcionalidades
 - Extracción automática de tablas con PyMuPDF.
