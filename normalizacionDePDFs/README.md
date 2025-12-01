@@ -1,4 +1,4 @@
-# Comparador / Normalizador de tablas PDF (UNAM)
+# Comparador / Normalizador de tablas PDF
 
 ## Descripción:
 Este proyecto extrae tablas de PDF de la UNAM, normaliza sus filas (incluyendo encabezados en dos niveles, filas de continuación y renglones de TOTALES) y genera un Excel por cada PDF procesado.
